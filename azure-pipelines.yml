@@ -26,6 +26,11 @@ steps:
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     replaceExistingArchive: true
 
+- script: |
+    pwd
+    ls -ltrh
+  displayName: 'Artifacts Details'    
+
 - task: AzureFileCopy@6
   inputs:
     SourcePath: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
