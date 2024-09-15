@@ -18,21 +18,21 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
-- task: ArchiveFiles@2
-  inputs:
-    rootFolderOrFile: '$(Build.BinariesDirectory)'
-    includeRootFolder: true
-    archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-    replaceExistingArchive: true  
+# - task: ArchiveFiles@2
+#   inputs:
+#     rootFolderOrFile: '$(Build.BinariesDirectory)'
+#     includeRootFolder: true
+#     archiveType: 'zip'
+#     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+#     replaceExistingArchive: true  
 
-- task: AzureFileCopy@6
-  inputs:
-    SourcePath: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-    azureSubscription: 'Microsoft Azure Sponsorship- Rapyder(438425ff-21cd-4300-90ba-3105f03ce85c)'
-    Destination: 'AzureBlob'
-    storage: 'tfrapyderpoc'
-    ContainerName: 'servicecatalog'
-    CleanTargetBeforeCopy: true
+# - task: AzureFileCopy@6
+#   inputs:
+#     SourcePath: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+#     azureSubscription: 'Microsoft Azure Sponsorship- Rapyder(438425ff-21cd-4300-90ba-3105f03ce85c)'
+#     Destination: 'AzureBlob'
+#     storage: 'tfrapyderpoc'
+#     ContainerName: 'servicecatalog'
+#     CleanTargetBeforeCopy: true
 
-- task: PublishPipelineMetadata@0
+# - task: PublishPipelineMetadata@0
