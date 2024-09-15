@@ -27,8 +27,7 @@ steps:
     replaceExistingArchive: true
 
 - script: |
-    pwd
-    ls -ltrh
+    dir
   displayName: 'Artifacts Details'    
 
 - task: AzureFileCopy@6
