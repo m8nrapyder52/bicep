@@ -24,11 +24,7 @@ steps:
     includeRootFolder: true
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-    replaceExistingArchive: true
-
-- script: |
-    dir
-  displayName: 'Artifacts Details'    
+    replaceExistingArchive: true  
 
 - task: AzureFileCopy@6
   inputs:
